@@ -1,3 +1,14 @@
-body > div.page.list { background-color:#fff591;
-
+body > div.page.list { background-color:white; width:100%;
+	.header { background-color:#e0e0e0; border-bottom:1px solid #c0c0c0; padding:10px 15px; height:25px; color:#606060;
+		span { vertical-align:middle; }
+		img { vertical-align:middle; }
+		.new-note { float:right; }
+		.search { float:right; margin:0 10%;}
+		.options { float:right; margin-left:15%; }
+	}
+	.list { overflow-y:auto;
+		.note { border-bottom:1px solid #c0c0c0; padding:10px 15px; height:30px; vertical-align:middle;
+			&:hover { background-color: #FFFFDF; }
+		}
+	}
 }
