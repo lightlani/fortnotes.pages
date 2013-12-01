@@ -1,14 +1,29 @@
 body > div.page.list { background-color:white; width:100%;
-	.header { background-color:#e0e0e0; border-bottom:1px solid #c0c0c0; padding:10px 15px; height:25px; color:#606060;
-		span { vertical-align:middle; }
-		img { vertical-align:middle; }
-		.new-note { float:right; }
-		.search { float:right; margin:0 10%;}
-		.options { float:right; margin-left:15%; }
+	.header { background-color:#e0e0e0; border-bottom:1px solid #c0c0c0; padding:10px 10px; height:25px; color:#606060;
+		div.header { vertical-align:middle; }
+			.new-note { float:right; cursor:pointer; }
+			.search { float:right; cursor:pointer; margin:0 10%; }
+			.options { float:right; cursor:pointer; margin-left:15%; }
 	}
 	.list { overflow-y:auto;
-		.note { border-bottom:1px solid #c0c0c0; padding:10px 15px; height:30px; vertical-align:middle;
+		.note { display:table; table-layout:fixed; border-bottom:1px solid #c0c0c0; height:30px; padding:5px; width:100%;
 			&:hover { background-color: #FFFFDF; }
+					.icon { display:table-cell; vertical-align:middle; width:30px; height:30px; padding-right:10px;
+						img.icon { margin:0 auto; display:block; width: 30px; }
+					}
+					.body { display:table-cell;
+						.info { padding-bottom:5px;
+							span { font-size:11px;
+								&.name { color:#aaa; margin-right:5px; }
+								&.data { margin-right:5px;
+									a { text-decoration:none; color:#0066cc; cursor:pointer; font-size:11px; }
+								}
+							}
+							}
+						.tags { color:#aaa; line-height:21px;
+							span.tag { cursor:pointer; display:inline-block; background-color:#ddd; color:black; font-size:11px; line-height:20px; padding:1px 5px 0; border:1px solid #ccc; margin-right:5px; }
+							}
+						}
 		}
 	}
 }
